@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Resume Builder</h1>
+    </header>
+
+    <section>
+        <h2>Enter Personal Information</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name" />
+
+        <label for="contact">Contact:</label>
+        <input type="tel" id="contact" placeholder="0123456789" />
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Your Address" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="xyz@gmail.com" />
+    </section>
+
+    <section>
+        <h2>Enter Professional Information</h2>
+        <label for="objective">Objective:</label>
+        <textarea id="objective" rows="4" placeholder="Your Career Objective"></textarea>
+
+        <label for="qualifications">Qualifications:</label>
+        <textarea id="qualifications" rows="4" placeholder="Your Qualifications"></textarea>
+
+        <label for="experience">Work Experience:</label>
+        <textarea id="experience" rows="4" placeholder="Your Work Experience"></textarea>
+
+        <label for="hobby">Hobby:</label>
+        <input type="text" id="hobby" placeholder="Your Hobby" />
+
+        <label for="skills">Skills:</label>
+        <textarea id="skills" rows="4" placeholder="Your Skills"></textarea>
+
+        <label for="template">Choose Template:</label>
+        <select id="template" onchange="changeTemplate()">
+          <option value="template1">Template 1</option>
+          <option value="template2">Template 2</option>
+        </select>
+
+        <button onclick="previewResume()">Preview Resume</button>
+    </section>
+
+    <!-- Preview Container (hidden by default) -->
+    <div class="preview-container" id="preview-container">
+        <div class="preview-column">
+            <h2 id="preview-name">Name</h2>
+            <p id="preview-contact-email">Contact | Email</p>
+            <p><strong>Address:</strong> <span id="preview-address"></span></p>
+        </div>
+
+        <div class="preview-column" id="professional-info">
+            
+           
+        </div>
+    </div>
+</body>
+</html>
